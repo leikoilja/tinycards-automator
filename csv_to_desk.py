@@ -2,6 +2,7 @@ import csv
 import os
 import sys
 import math
+from datetime import datetime
 from getpass import getpass
 
 from tinycards import Tinycards
@@ -52,7 +53,10 @@ def csv_to_deck(csv_path, deck_base_name):
 
         # Customize deck
         deck.cover = DECK_COVER_PATH
-        deck.description = DECK_DESC
+        deck.description = (
+            f'{DECK_DESC}. '
+            f'Last updated on {datetime.now().strftime("%d/%m/%Y %H:%M:%S")}'
+        )
         deck.tts_languages = DECK_TTS_LANGUAGES
 
         # Populate deck with cards from CSV data
@@ -65,6 +69,7 @@ def csv_to_deck(csv_path, deck_base_name):
         # Save changes to Tinycards
         if not DEBUG:
             client_tinycards.update_deck(deck)
+            print(f'Successfully created "{subdeck_name}"')
 
     if not DEBUG:
         print(f'Successfully created {decks} decks from {pairs_amount} word pairs')

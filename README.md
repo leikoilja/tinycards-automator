@@ -4,6 +4,8 @@ A simple nightly build of python script to automatically create and upload flash
 ## Use case
 As I studied Swedish language I caught myself using google translator all the time. The problem with it is that all the translation history is gone and so is understanding foreign words. So instead of google tranlator I discovered chrome extension [Rememberry](https://chrome.google.com/webstore/detail/rememberry-translate-and/dipiagiiohfljcicegpgffpbnjmgjcnf?hl=en-GB) which is a great alternative to traslate words from web and save them locally. The extension allows you to export as CSV. Once you have the CSV file with your words the current script will help to automatically create Tinycard's decks for you to practice flashcards offline using smartphone.
 
+You can see my [Tinycards profile](https://tiny.cards/users/leikoilja) as example.
+
 ## Installation
 Thanks to [@floscha](https://github.com/floscha) we have an unofficial pythin API for Tinycards:
 
